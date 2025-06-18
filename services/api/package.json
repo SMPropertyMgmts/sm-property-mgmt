@@ -6,7 +6,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-  "start": "node src/index.js",
+  "start": "npm-run-all build start:api",
+  "start:api": "node src/index.js",
   "test": "node --experimental-vm-modules ../../node_modules/jest/bin/jest.js",
   "clean:types": "rimraf ../../types/dist",
   "clean:common": "rimraf ../common/dist",
